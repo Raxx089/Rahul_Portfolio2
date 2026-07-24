@@ -170,7 +170,7 @@ export function HeroSection({ navigate }: HeroProps) {
             >
               <Sparkles size={12} className="text-violet-500" />
               <span className="text-xs font-medium text-violet-700 dark:text-violet-400">
-                Senior & Lead UX / Product Designer · AI & Enterprise SaaS
+                UX Lead & Product Designer · AI & Enterprise SaaS
               </span>
             </motion.div>
 

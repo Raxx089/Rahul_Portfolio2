@@ -46,7 +46,7 @@ export function Navbar({ theme, toggleTheme, currentPage, navigate }: NavbarProp
                   Rahul Sharma
                 </div>
                 <div className="text-[10px] text-gray-500 dark:text-gray-400 leading-tight">
-                  Senior & Lead UX / Product Designer
+                  UX Lead & Product Designer
                 </div>
               </div>
             </button>
@@ -134,12 +134,14 @@ export function Navbar({ theme, toggleTheme, currentPage, navigate }: NavbarProp
               >
                 Hire Me
               </button>
-              <button
+              <a
+                href="/rahul-sharma-resume.pdf"
+                download="Rahul-Sharma-Resume.pdf"
                 className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-gray-200 dark:border-white/10 text-sm text-gray-700 dark:text-gray-300"
               >
                 <Download size={13} />
                 Resume
-              </button>
+              </a>
             </div>
           </motion.div>
         )}

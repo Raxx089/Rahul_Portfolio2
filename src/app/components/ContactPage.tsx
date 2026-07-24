@@ -128,7 +128,8 @@ export function ContactPage() {
               {/* Resume */}
               <FadeIn delay={0.2}>
                 <a
-                  href="#"
+                  href="/rahul-sharma-resume.pdf"
+                  download="Rahul-Sharma-Resume.pdf"
                   className="flex items-center justify-center gap-2 w-full py-3 rounded-xl border border-gray-200 dark:border-white/10 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"
                 >
                   <Download size={14} />

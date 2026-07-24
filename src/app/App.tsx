@@ -20,7 +20,7 @@ export type Page =
   | "contact";
 
 export default function App() {
-  const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [theme, setTheme] = useState<"dark" | "light">("light");
   const [currentPage, setCurrentPage] = useState<Page>("home");
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 

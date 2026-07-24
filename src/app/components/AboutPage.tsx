@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { Download, Linkedin, ExternalLink, CheckCircle2, Award, BookOpen, Cpu, Layers, Users, Target, Zap } from "lucide-react";
+import { Download, Linkedin, ExternalLink, CheckCircle2, Award, BookOpen, Cpu, Layers, Users, Target, Zap, Palette } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import rahulPhoto from "../../imports/Screenshot_2026-06-10_at_4.26.39_PM.png";
 
@@ -23,38 +23,38 @@ function FadeIn({ children, delay = 0, className = "" }: { children: React.React
 const timeline = [
   {
     year: "2021",
-    role: "Senior UX / Product Designer",
+    role: "UX Lead & Product Designer",
     company: "Accenture | Gurugram",
     desc: "Led end-to-end UX for enterprise B2B SaaS across FinTech, E-commerce, and HealthTech. Designed AI-powered workflows and dashboards, managed design systems (30% faster launches), and embedded human-centered AI practices with WCAG accessibility standards.",
-    tags: ["AI/ML", "SaaS", "Design Systems", "HealthTech", "FinTech", "E-commerce"],
+    tags: ["AI/ML", "Enterprise SaaS", "Human-Centered AI", "Design Systems", "HealthTech", "FinTech", "E-commerce", "PLM technology", "Accessibility", "Usability", "WCAG"],
   },
   {
     year: "2021",
     role: "Senior Product Designer",
     company: "Cavisson System",
-    desc: "Owned the AI Decision Engine product area — designing explainable AI interfaces for enterprise workflow automation used by 7,500+ enterprise customers.",
-    tags: ["AI Workflows", "Enterprise SaaS", "ITSM"],
+    desc: "Dedesigned analytics dashboards for enterprise decision-makers, simplifying complex data visualization & Designed intelligent alerting systems and predictive insight interfaces to enhance data-driven decision making.",
+    tags: ["Analytics", "Enterprise SaaS", "PLM"],
   },
   {
     year: "2019",
-    role: "Product Designer II",
+    role: "Senior UI/UX Designer",
     company: "Vaibav Global Limited",
-    desc: "Led UX for Einstein Analytics — Salesforce's AI-powered analytics suite. Shipped major redesign that improved DAU by 40%.",
-    tags: ["Analytics", "CRM", "AI"],
+    desc: "Led the design of e-commerce customer journeys, focusing on checkout experience optimization, Optimized mobile shopping flows through behavioral analysis and funnel visualization.",
+    tags: ["E-commerce", "Web Design", "CRM", "Mobile UX", "Checkout Optimization web & app"],
   },
   {
     year: "2016",
-    role: "Product Designer",
+    role: "UI/UX Designer",
     company: "Interglobe Technology Pvt Ltd",
-    desc: "Designed the claims management platform that became the foundation for the AI-powered relaunch in 2023. First in-house product designer at Zurich's digital studio.",
-    tags: ["InsurTech", "Claims", "FinTech"],
+    desc: "Designed logistics and travel management platforms using reusable design component systems.",
+    tags: ["Travel & Hospitality", "Website Design", "Mobile UX", "Design Systems"],
   },
   {
     year: "2014",
-    role: "UX Designer",
+    role: "Graphic & Web Designer",
     company: "Concentrix",
-    desc: "Contributed to Jira's redesign initiative. Focused on enterprise project management workflows and developer tooling.",
-    tags: ["Dev Tools", "Project Management"],
+    desc: "Designed and developed responsive websites and digital assets to enhance brand visibility, created marketing creatives, social media campaigns, and email templates while maintaining strict visual consistency.",
+    tags: ["Web Design", "Graphic Design", "Marketing"],
   },
   
 ];
@@ -108,7 +108,8 @@ export function AboutPage() {
               </p>
               <div className="flex gap-3">
                 <a
-                  href="#"
+                  href="/rahul-sharma-resume.pdf"
+                  download="Rahul-Sharma-Resume.pdf"
                   className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 text-white text-sm font-medium hover:opacity-90 transition-opacity"
                 >
                   <Download size={14} />
@@ -123,6 +124,15 @@ export function AboutPage() {
                   <Linkedin size={14} />
                   LinkedIn
                 </a>
+                <a
+                  href="https://www.behance.net/raxx08928b6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 text-sm font-medium hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"
+                >
+                  <Palette size={14} />
+                  Behance
+                </a>
               </div>
             </FadeIn>
 
@@ -132,7 +142,7 @@ export function AboutPage() {
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-gray-100 dark:border-white/8">
                   <ImageWithFallback
                     src={rahulPhoto}
-                    alt="Rahul Sharma — Senior & Lead UX / Product Designer"
+                    alt="Rahul Sharma — UX Lead & Product Designer"
                     className="w-full h-full object-cover object-top"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent" />
@@ -140,7 +150,7 @@ export function AboutPage() {
                     <div className="bg-white/90 dark:bg-[#0f0f1a]/90 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                       <div className="text-sm font-semibold text-gray-900 dark:text-white">Rahul Sharma</div>
                       <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
-                        Senior & Lead UX / Product Designer · AI & SaaS
+                        UX Lead & Product Designer · AI & SaaS
                       </div>
                       <div className="flex items-center gap-1.5 mt-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />

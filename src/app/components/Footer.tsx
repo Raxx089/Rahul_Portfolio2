@@ -26,7 +26,7 @@ export function Footer({ navigate }: FooterProps) {
               </div>
               <div>
                 <div className="text-sm font-semibold text-gray-900 dark:text-white">Rahul Sharma</div>
-                <div className="text-xs text-gray-500 dark:text-gray-400">Senior & Lead UX / Product Designer</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">UX Lead & Product Designer</div>
               </div>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed max-w-xs">

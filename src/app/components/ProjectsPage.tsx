@@ -60,16 +60,21 @@ export function ProjectsPage({ navigate }: ProjectsPageProps) {
       <section className="px-6 pb-10">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
-            <div className="flex items-center gap-2 flex-wrap">
-              <Filter size={13} className="text-gray-400 dark:text-gray-500" />
+            <div className="flex flex-wrap items-center gap-2.5 rounded-2xl border border-gray-100 dark:border-white/[0.06] bg-gray-50/70 dark:bg-white/[0.03] px-3 py-3 sm:px-4">
+              <div className="flex items-center gap-2 pr-1">
+                <Filter size={13} className="text-gray-400 dark:text-gray-500" />
+                <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500">
+                  Filter
+                </span>
+              </div>
               {allTags.map((tag) => (
                 <button
                   key={tag}
                   onClick={() => setActiveFilter(tag)}
-                  className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                  className={`inline-flex items-center justify-center rounded-full px-3.5 py-1.5 text-xs font-medium transition-all ${
                     activeFilter === tag
-                      ? "bg-violet-600 text-white shadow-md shadow-violet-500/20"
-                      : "bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-white/10"
+                      ? "bg-violet-600 text-white shadow-sm shadow-violet-500/20"
+                      : "bg-white dark:bg-[#0f0f1a] text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/10"
                   }`}
                 >
                   {tag}

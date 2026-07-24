@@ -29,6 +29,11 @@ const experiments = [
     status: "Active",
     color: "#8b5cf6",
     metrics: "12 component variants tested",
+    details: [
+      "Generate layout variations from task context and user role",
+      "Balance personalization with consistency across the design system",
+      "Support faster prototyping for adaptive enterprise experiences",
+    ],
   },
   {
     id: 2,
@@ -40,6 +45,11 @@ const experiments = [
     status: "Prototype",
     color: "#3b82f6",
     metrics: "3 layout algorithms compared",
+    details: [
+      "Reorganize panels around recurring analytical behaviors",
+      "Surface the most relevant KPIs first and expand on demand",
+      "Reduce dashboard fatigue through contextual layout switching",
+    ],
   },
   {
     id: 3,
@@ -51,6 +61,11 @@ const experiments = [
     status: "Published",
     color: "#10b981",
     metrics: "24 patterns documented",
+    details: [
+      "Show confidence, evidence, and recommended actions together",
+      "Design override paths that preserve human judgment",
+      "Create trust through transparent, legible AI reasoning",
+    ],
   },
   {
     id: 4,
@@ -62,6 +77,11 @@ const experiments = [
     status: "Active",
     color: "#f59e0b",
     metrics: "500+ tokens managed",
+    details: [
+      "Bridge Figma tokens with React and CSS output",
+      "Reduce handoff drift across design and engineering",
+      "Enable scalable system governance for fast-moving teams",
+    ],
   },
   {
     id: 5,
@@ -73,6 +93,11 @@ const experiments = [
     status: "Research",
     color: "#06b6d4",
     metrics: "8 chart types explored",
+    details: [
+      "Explore time-series layouts beyond standard chart patterns",
+      "Highlight anomaly bursts, trend shifts, and context changes",
+      "Make historical data easier to compare and explain",
+    ],
   },
   {
     id: 6,
@@ -84,6 +109,11 @@ const experiments = [
     status: "Published",
     color: "#ec4899",
     metrics: "40+ interactions",
+    details: [
+      "Create motion patterns that feel premium but remain lightweight",
+      "Document interaction states for status, alerts, and feedback",
+      "Use motion to clarify transitions without overwhelming users",
+    ],
   },
 ];
 
@@ -240,7 +270,18 @@ export function AILabPage() {
                   {/* Content */}
                   <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1.5">{exp.category}</div>
                   <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2 leading-snug">{exp.title}</h3>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-4">{exp.desc}</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-3">{exp.desc}</p>
+
+                  {exp.details && exp.details.length > 0 && (
+                    <ul className="space-y-1.5 mb-4">
+                      {exp.details.map((detail) => (
+                        <li key={detail} className="flex items-start gap-2">
+                          <div className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: exp.color }} />
+                          <span className="text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed">{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1.5 mb-4">

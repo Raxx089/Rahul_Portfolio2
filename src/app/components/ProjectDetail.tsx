@@ -31,6 +31,42 @@ export function ProjectDetail({ projectId, navigate }: ProjectDetailProps) {
   const currentIndex = projects.indexOf(project);
   const nextProject = projects[(currentIndex + 1) % projects.length];
 
+  const principles = project.principles?.length
+    ? project.principles
+    : [
+        "Reduce cognitive load through progressive disclosure and clear hierarchy",
+        "Follow Hick's Law and Fitts's Law to simplify choices and improve reachability",
+        "Align the experience with familiar mental models and established patterns",
+        "Support users with transparent feedback and calm, predictable interactions",
+      ];
+
+  const uiPrinciples = project.uiPrinciples?.length
+    ? project.uiPrinciples
+    : [
+        "Create a strong visual hierarchy with clear emphasis and spacing",
+        "Keep interactions consistent across components, states, and flows",
+        "Make actionability obvious through thoughtful layout and affordances",
+        "Use motion and feedback to guide attention without creating noise",
+      ];
+
+  const accessibilityGuidelines = project.accessibilityGuidelines?.length
+    ? project.accessibilityGuidelines
+    : [
+        "Follow WCAG 2.1 AA standards for contrast, structure, and clarity",
+        "Design for keyboard use with visible focus states and logical tab order",
+        "Support screen readers through semantic labels, landmarks, and readable copy",
+        "Ensure the interface remains usable across zoom, motion, and assistive conditions",
+      ];
+
+  const usabilityStudy = project.usabilityStudy?.length
+    ? project.usabilityStudy
+    : [
+        "Validate flows with moderated usability sessions and task-based testing",
+        "Measure clarity, confidence, and completion to uncover friction quickly",
+        "Translate feedback into quicker iterations on layout, flow, and copy",
+        "Close the loop with follow-up validation before launch and rollout",
+      ];
+
   return (
     <div className="pt-20 min-h-screen bg-white dark:bg-[#07070e]">
       {/* Back */}
@@ -201,8 +237,48 @@ export function ProjectDetail({ projectId, navigate }: ProjectDetailProps) {
         </div>
       </section>
 
-      {/* Research */}
+      {/* Design Foundations */}
       <section className="py-16 px-6 bg-white dark:bg-[#07070e]">
+        <div className="max-w-7xl mx-auto">
+          <FadeIn>
+            <div className="text-xs font-semibold text-violet-600 dark:text-violet-400 uppercase tracking-widest mb-4">
+              Design Foundations
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+              Principles, accessibility, and validation
+            </h2>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+            {[
+              { title: "UX Principles & Laws", items: principles },
+              { title: "UI Principles", items: uiPrinciples },
+              { title: "Accessibility Guidelines", items: accessibilityGuidelines },
+              { title: "Usability Study", items: usabilityStudy },
+            ].map((block, i) => (
+              <FadeIn key={block.title} delay={i * 0.08}>
+                <div className="p-6 rounded-2xl border border-gray-100 dark:border-white/[0.06] bg-gray-50/50 dark:bg-[#0f0f1a] h-full">
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">{block.title}</h3>
+                  <ul className="space-y-2.5">
+                    {block.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <div
+                          className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0"
+                          style={{ backgroundColor: project.color }}
+                        />
+                        <span className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Research */}
+      <section className="py-16 px-6 bg-gray-50/50 dark:bg-[#090912]">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="text-xs font-semibold text-violet-600 dark:text-violet-400 uppercase tracking-widest mb-4">
@@ -215,7 +291,7 @@ export function ProjectDetail({ projectId, navigate }: ProjectDetailProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {project.research.map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.1}>
-                <div className="p-6 rounded-2xl border border-gray-100 dark:border-white/[0.06] bg-gray-50/50 dark:bg-[#0f0f1a]">
+                <div className="p-6 rounded-2xl border border-gray-100 dark:border-white/[0.06] bg-white dark:bg-[#0f0f1a]">
                   <div className="flex items-center gap-2 mb-3">
                     <div
                       className="w-2 h-2 rounded-full"
