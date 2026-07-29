@@ -101,7 +101,7 @@ export function ContactPage() {
                     Connect
                   </div>
                   {[
-                    { icon: <Mail size={14} />, label: "Email", value: "rahul@design.co", href: "mailto:rahul@design.co" },
+                    { icon: <Mail size={14} />, label: "Email", value: "raxx089@gmail.com", href: "mailto:raxx089@gmail.com" },
                     { icon: <Linkedin size={14} />, label: "LinkedIn", value: "linkedin.com/in/rahulsharma", href: "https://linkedin.com" },
                     { icon: <ExternalLink size={14} />, label: "Behance", value: "behance.net/rahulsharma", href: "https://behance.net" },
                   ].map((link) => (

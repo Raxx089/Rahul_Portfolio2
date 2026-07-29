@@ -59,11 +59,11 @@ export function Footer({ navigate }: FooterProps) {
             </div>
             <div className="space-y-2">
               <a
-                href="mailto:rahul.sharma@design.com"
+                href="mailto:raxx089@gmail.com"
                 className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors group"
               >
                 <Mail size={13} />
-                rahul.sharma@design.com
+                raxx089@gmail.com
               </a>
               <a
                 href="https://linkedin.com"
