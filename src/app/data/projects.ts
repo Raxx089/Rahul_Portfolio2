@@ -28,6 +28,7 @@ export interface Project {
   accessibilityGuidelines?: string[];
   usabilityStudy?: string[];
   prototypeUrl?: string;
+  applicationUrl?: string;
   fullProcess?: ProcessPhase[];
 }
 
@@ -94,6 +95,7 @@ export const projects: Project[] = [
       { phase: "Validate", activities: ["Usability testing", "A/B testing", "Pilot launch", "Iteration"] },
     ],
     prototypeUrl: "https://www.figma.com/proto/placeholder-claims-prototype",
+    applicationUrl: "https://ai-powered-claims-management-platfo.vercel.app/#/",
     fullProcess: [
       {
         week: "Wk 1–2",

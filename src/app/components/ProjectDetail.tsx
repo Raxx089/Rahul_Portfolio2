@@ -119,19 +119,35 @@ export function ProjectDetail({ projectId, navigate }: ProjectDetailProps) {
 
             {/* Prototype CTA — shown only for projects with a prototype URL */}
             {project.prototypeUrl && (
-              <motion.a
-                href={project.prototypeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 text-white text-sm font-semibold hover:opacity-90 transition-opacity shadow-lg shadow-violet-500/25 mb-2"
-              >
-                <ExternalLink size={15} />
-                View Final Prototype
-                <span className="px-1.5 py-0.5 rounded-md bg-white/20 text-[10px] font-medium">Figma</span>
-              </motion.a>
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <motion.a
+                  href={project.prototypeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 text-white text-sm font-semibold hover:opacity-90 transition-opacity shadow-lg shadow-violet-500/25"
+                >
+                  <ExternalLink size={15} />
+                  View Final Prototype
+                  <span className="px-1.5 py-0.5 rounded-md bg-white/20 text-[10px] font-medium">Figma</span>
+                </motion.a>
+                {project.id === "claims-management" && (
+                  <motion.a
+                    href={project.applicationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl border border-violet-200 dark:border-violet-500/30 text-violet-700 dark:text-violet-300 text-sm font-semibold hover:bg-violet-50 dark:hover:bg-violet-500/10 transition-colors"
+                  >
+                    <ExternalLink size={15} />
+                    View Application
+                  </motion.a>
+                )}
+              </div>
             )}
           </FadeIn>
 

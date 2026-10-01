@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Download, Linkedin, ExternalLink, CheckCircle2, Award, BookOpen, Cpu, Layers, Users, Target, Zap, Palette } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import rahulPhoto from "../../imports/Screenshot_2026-06-10_at_4.26.39_PM.png";
+import rahulPhoto from "../../imports/Pofile Image.png";
 
 function FadeIn({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef(null);

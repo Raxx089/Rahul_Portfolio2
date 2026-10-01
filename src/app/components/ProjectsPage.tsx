@@ -132,7 +132,7 @@ export function ProjectsPage({ navigate }: ProjectsPageProps) {
                       ))}
                     </div>
                     <div className="flex items-center gap-2 text-sm font-medium text-violet-600 dark:text-violet-400 group-hover:gap-3 transition-all">
-                      View case study
+                      View Application
                       <ArrowRight size={14} />
                     </div>
                   </div>
