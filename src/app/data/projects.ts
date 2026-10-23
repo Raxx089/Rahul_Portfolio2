@@ -297,7 +297,7 @@ export const projects: Project[] = [
     image:
       "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&q=80",
     color: "#3b82f6",
-    year: "2022",
+    year: "2026",
     role: "Principal Designer",
     duration: "10 months",
     overview:
@@ -333,6 +333,7 @@ export const projects: Project[] = [
       { phase: "Launch", activities: ["Phased rollout", "Training programs", "Feedback loops", "Continuous optimization"] },
     ],
     prototypeUrl: "https://www.figma.com/proto/placeholder-decision-intelligence-prototype",
+    applicationUrl: "https://ai-decision-intelligence-dashboard-two.vercel.app/",
     fullProcess: [
       {
         week: "Wk 1–2",
