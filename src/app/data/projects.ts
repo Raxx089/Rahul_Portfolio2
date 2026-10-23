@@ -95,7 +95,7 @@ export const projects: Project[] = [
       { phase: "Validate", activities: ["Usability testing", "A/B testing", "Pilot launch", "Iteration"] },
     ],
     prototypeUrl: "https://www.figma.com/proto/placeholder-claims-prototype",
-    applicationUrl: "https://ai-powered-claims-management-platfo.vercel.app/#/",
+    applicationUrl: "https://ai-powered-claims-management-system.vercel.app/",
     fullProcess: [
       {
         week: "Wk 1–2",
