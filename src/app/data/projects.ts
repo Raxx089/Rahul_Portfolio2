@@ -493,6 +493,7 @@ export const projects: Project[] = [
       { phase: "Validate", activities: ["Prototype testing", "Beta launch", "Merchant feedback", "Metric tracking"] },
     ],
     prototypeUrl: "https://www.figma.com/proto/placeholder-analytics-redesign-prototype",
+    applicationUrl: "https://enterprise-data-analytics-applicati.vercel.app/",
     fullProcess: [
       {
         week: "Wk 1–2",
@@ -608,6 +609,7 @@ export const projects: Project[] = [
       { phase: "Validate", activities: ["Usability testing", "Working sessions", "Operational feedback", "Iteration"] },
     ],
     prototypeUrl: "https://www.figma.com/proto/placeholder-plm-erp-prototype",
+    applicationUrl: "https://enterprise-product-lifecycle-manage.vercel.app/",
     fullProcess: [
       {
         week: "Wk 1–2",
